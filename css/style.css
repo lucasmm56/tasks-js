@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom, white, black);
+}
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+section{
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+section h2{
+    margin: 1em 0;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 0.5em;
+    background-color: black;
+    border-radius: 0.3em;
+    width: 100%;
+}
+
+form input{
+    border: 2px solid white;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    padding: 1em 1em;
+    width: 90%;
+}
+form input::placeholder{
+    color: rgba(0, 0, 0, 0.598);
+    font-weight: 700;
+}
+form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid white;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    width: 3.3em;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    transition: .4s;
+}
+
+form button:hover{
+    color:#53ac59;
+    border: 1.5px solid #53ac59;
+    background-color: white;
+    cursor: pointer;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: row;
+}
+
+.tasks p{
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    background-color: white;
+    padding: 1em 1em;
+    width: 100%;
+    font-weight: bold;
+}
+
+.tasks .finish, .delete{
+    display: flex;
+    justify-content: center;
+    width: 2em;
+}
+.tasks .finish:hover{
+    background-color:  #53ac59;
+    color: white;
+}
+.tasks .delete:hover{
+    background-color: red;
+    color: white;
+}
+ion-icon{
+    font-size: 25px;
+}
+#tasks-list-container{
+    width: 100%;
+    text-align: center;
+}
+#task-list{
+    list-style: none;
+}
+
+#task-list li{
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    border-bottom: 3px solid black;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    transition: .5s;
+    font-weight: bold;
+    border-radius: 0.2em;
+}
+
+#task-list li span{
+    font-size: 1.2em;
+}
+
+#task-list ion-icon{
+    position: absolute;
+    height: 39px;
+    transition: .5s;
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+}
+
+.done-btn{
+    right: 40px;
+}
+.remove-btn{
+    right: 0px;
+}
+.done-btn:hover{
+    background-color: #53ac59;
+    color: white;
+}
+.remove-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+.hide{
+    display: none;
+}
+
+#task-list li.done{
+    background-color: rgb(57, 57, 57);
+    color: white;
+    text-decoration: line-through;
+}
+
+@media (max-width:486px) {
+    section{
+        margin: 2em 0.5em;
+    }
+}
